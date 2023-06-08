@@ -1,5 +1,5 @@
 # Data-Viewer
-Uploads and fetches data on a react app (Assignment for invsto)
+Uploads and fetches data on a react app with fastapi backend (Assignment for invsto)
 Have used postgres as DB and storing data in a table named stock inside the data_viewer_db.
 
 Commands to download DB : 
