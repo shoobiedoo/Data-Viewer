@@ -3,11 +3,12 @@ Uploads and fetches data on a react app (Assignment for invsto)
 Have used postgres as DB and storing data in a table named stock inside the data_viewer_db.
 
 Commands to download DB : 
+```bash
+psql -U username -d dbname
 ```
-psql -U shubhankitsingh -d data_viewer_db
-
+```sql
 -- query used for creating the database :
- "CREATE TABLE stock (
+ CREATE TABLE stock (
     datetime timestamp NOT NULL,
     close real NOT NULL,
     high real NOT NULL,
@@ -15,7 +16,7 @@ psql -U shubhankitsingh -d data_viewer_db
     open real NOT NULL,
     volume integer NOT NULL,
     instrument text NOT NULL
-);"
+);
 ```
 
 

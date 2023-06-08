@@ -8,9 +8,22 @@ import pandas as pd
 from io import StringIO
 from typing import List
 from datetime import datetime
+from dotenv import load_dotenv
+import os
 
+# Load environment variables
+load_dotenv()
+
+DB_USER = os.getenv('DB_USER')
+DB_PASSWORD = os.getenv('DB_PASSWORD')
+DB_NAME = os.getenv('DB_NAME')
+DB_HOST = os.getenv('DB_HOST')
+DB_PORT = os.getenv('DB_PORT')
+
+print(DB_NAME)
 # Define SQLAlchemy database URL and create engine
-DATABASE_URL = "postgresql://shubhankitsingh:@localhost:5432/data_viewer_db"
+DATABASE_URL = f"postgresql://{DB_USER}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}"
+#DATABASE_URL = "postgresql://${username:@localhost:5432/dbname"
 engine = create_engine(DATABASE_URL)
 
 # Load metadata
